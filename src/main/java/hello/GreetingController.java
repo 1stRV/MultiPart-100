@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RestController
 public class GreetingController {
-  private String DIR = "/Users/Roman/IdeaProjects/project85/12MultiPart/src/main/java/hello";
+  private String DIR = "/Users/Roman/IdeaProjects/project85/12MultiPart/src/test/resources/";
 
   @PostMapping("/upload")
   public List<String> importFile(@RequestParam("file") MultipartFile file) throws IOException {

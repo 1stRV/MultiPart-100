@@ -37,6 +37,6 @@ public class GreetingControllerTest {
     Path path = Paths.get(DIR + "dictionary.txt");
     byte[] temp = Files.readAllBytes(path);
     String value = new String(temp);
-    Assertions.assertThat(value).isEqualTo("bob");
+    Assertions.assertThat(value.trim()).isEqualTo("bob");
   }
 }
