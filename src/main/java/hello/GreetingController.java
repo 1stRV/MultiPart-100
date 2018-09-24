@@ -24,10 +24,6 @@ public class GreetingController {
 
   @PostMapping("/upload")
   public List<String> importFile(@RequestParam("file") MultipartFile file) throws IOException {
-    byte[] bytes = file.getBytes();
-    Path path = Paths.get(DIR + file.getOriginalFilename());
-    Files.write(path, bytes);
-
     List<String> words = new ArrayList<>();
     if (file.isEmpty()) {
       log.error("Файл пустой");
@@ -47,11 +43,12 @@ public class GreetingController {
     }
   }
 
-//  @GetMapping("/upload")
-//  public void exportFile(@RequestParam("type") String type) throws IOException {
-//    byte[] bytes = file.getBytes();
-//    Path path = Paths.get(DIR + file.getOriginalFilename());
-//
-//    Files.readAllBytes(path);
-//  }
+  @GetMapping("/upload")
+  public void exportDictionary(String fileName, String fileType) throws IOException {
+    List<String> words = new ArrayList<>();
+    words.add("Привет");
+    words.add("Как дела?");
+    Path path = Paths.get(DIR + fileName + "." + fileType);
+    Files.write(path, words);
+  }
 }
