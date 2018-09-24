@@ -43,11 +43,10 @@ public class GreetingController {
     }
   }
 
-  @GetMapping("/upload")
-  public void exportDictionary(String fileName, String fileType) throws IOException {
+  @GetMapping("/download")
+  public void exportFile(String fileName, String fileType) throws IOException {
     List<String> words = new ArrayList<>();
-    words.add("Привет");
-    words.add("Как дела?");
+    words.add("bob");
     Path path = Paths.get(DIR + fileName + "." + fileType);
     Files.write(path, words);
   }
