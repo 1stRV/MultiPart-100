@@ -69,6 +69,16 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework</groupId>-->
+            <!--<artifactId>spring-web</artifactId>-->
+            <!--<version>5.0.8.RELEASE</version>-->
+        <!--</dependency>-->
+      <!--<dependency>-->
+        <!--<groupId>org.apache.tomcat.embed</groupId>-->
+        <!--<artifactId>tomcat-embed-core</artifactId>-->
+        <!--<version>8.5.34</version>-->
+      <!--</dependency>-->
     </dependencies>
 
     <properties>
